@@ -1,0 +1,42 @@
+<div class="guestbook-contain">
+
+        <table id="table-form">
+            <tr>
+                <td style="width: 40%;vertical-align: text-top;">
+                    <p style="color: #45c71a;" data-dojo-attach-point="msg"></p>
+                    <p style="color: red;" data-dojo-attach-point="msgErr"></p>
+
+                    <div class="${greetingClass}Wrap">
+                        <h2>Add Greeting</h2>
+
+                        <div style="margin-bottom: 5px;">
+                            <label>Name: </label>
+                            <input class="txt-input" placeholder="Add Name" data-dojo-attach-point="signGuestBookName" data-dojo-type="dijit/form/TextBox" value=""/>
+                        </div>
+                        <div>
+                            <label>Message: </label>
+
+                            <textarea style="height: 100px;" class="txt-input" data-dojo-attach-point="inputGreeting" data-dojo-type="dijit/form/SimpleTextarea" name="inputGreeting" value="${greetingContent}" placeholder="Message"></textarea>
+                            <input type="submit" data-dojo-attach-point="btnAdd" name="btnAdd" value="Add" />
+                        </div>
+                    </div>
+                </td>
+
+                <td style="padding-left: 30px;border-left: 1px solid rgba(136, 136, 136, 0.24);padding-bottom: 30px;">
+                    <div class="${guestBookClass}Wrap">
+                        <h2>List Greeting</h2>
+                        <div id="${guestBookClass}Form">
+                            <input class="txt-input" placeholder="Search Name" data-dojo-attach-point="inputGuestBookName" data-dojo-type="dijit/form/TextBox" value="${guestBookName}"/>
+                            <input type="submit" data-dojo-attach-point="btnSwitch" name="btnSwitch" value="Switch"/>
+                        </div>
+                        <div class="resultInfo" >
+                            <span data-dojo-attach-point="greetingTotal"></span>
+                        </div>
+                        <div class="${guestBookClass}List" data-dojo-attach-point="greetingListNode"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+</div>

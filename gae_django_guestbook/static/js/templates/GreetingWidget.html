@@ -1,0 +1,30 @@
+<div class="greetingWidget" data-dojo-attach-point="greetingWidget">
+	<div style="margin-bottom: 10px">
+
+		<div class="row">
+            <img src=""/>
+			<label>User: </label>
+			<span style="color:#0a6ce6;">${createdUser} &nbsp;</span>
+		</div>
+	</div>
+	<div style="height: 20px;margin-bottom: 10px">
+		<label>Content:</label>
+        <div><label data-dojo-attach-point="lblContent" style="width: 340px;">${content}</label>
+                <div data-dojo-attach-point="editContent" style="display: none"><input  type="text" data-dojo-attach-point="contentEditNode" class="inputGreeting txt-input"  value="${content}" data-dojo-type="dijit/form/TextBox" /></div>
+        </div>
+
+	</div>
+	<div >
+		<div class="row" style="margin-bottom: 10px">
+			<label>Updated Time:</label>
+			<span>${updatedTime}</span>
+		</div>
+		<div class="row" style="border-top: 1px solid #ccc">
+			<button data-dojo-attach-point="btnEdit" style="display: none">Edit</button>
+			<button data-dojo-attach-point="btnSave" style="display: none">Save</button>
+			<button data-dojo-attach-point="btnCancel" style="display: none">Cancel</button>
+			<button data-dojo-attach-point="btnDelete" style="display: none">Delete</button>
+            <div class="date-add">${createdTime}</div>
+		</div>
+	</div>
+</div>
